@@ -230,4 +230,10 @@ const staffList = ref<Staff[]>([
 const handleCreateTask = () => {
   alert("Create Task logic triggered");
 };
+
+definePageMeta({
+  layout: "default",
+  // Without this the last crumb would be the raw route id ("Room Service / 3").
+  breadcrumb: "Order details",
+});
 </script>
