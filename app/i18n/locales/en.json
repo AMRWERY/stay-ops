@@ -1,7 +1,8 @@
 {
   "home": {},
   "nav": {
-    "switch_language": "Switch to {language}"
+    "switch_language": "Switch to {language}",
+    "switching_language": "Switching to {language}…"
   },
   "greeting": {
     "morning": "Good morning",

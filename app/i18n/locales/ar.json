@@ -1,7 +1,8 @@
 {
   "home": {},
   "nav": {
-    "switch_language": "التبديل إلى {language}"
+    "switch_language": "التبديل إلى {language}",
+    "switching_language": "جارٍ التبديل إلى {language}…"
   },
   "greeting": {
     "morning": "صباح الخير",

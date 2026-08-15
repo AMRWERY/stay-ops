@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="StayOps">
+  <title>StayOps</title>
+  <!-- Ink tile, matching the sidebar surface. -->
+  <rect width="64" height="64" rx="14" fill="#10233D" />
+  <!-- The room key: hospitality's oldest trust object, and this product's
+       signature motif (see docs/design.md §2). Brass on Ink, nothing else. -->
+  <g
+    fill="none"
+    stroke="#C7A257"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <!-- Bow -->
+    <circle cx="25" cy="25" r="9" />
+    <!-- Shank -->
+    <path d="M31.6 31.6 L45 45" />
+    <!-- Teeth -->
+    <path d="M37.5 37.5 L33.5 41.5" />
+    <path d="M41.5 41.5 L38 45" />
+  </g>
+</svg>

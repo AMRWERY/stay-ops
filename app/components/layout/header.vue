@@ -134,9 +134,16 @@ const switchLabel = computed(() =>
   t("nav.switch_language", { language: nextLocale.value.name }),
 );
 
+const { run: runWithOverlay } = useOverlay();
+
 // setLocale navigates to the prefixed route for the target locale and
-// persists the i18n_redirected cookie.
-const toggleLocale = () => setLocale(nextLocale.value.code);
+// persists the i18n_redirected cookie. The overlay covers the swap so the
+// half-translated in-between frame never shows.
+const toggleLocale = () =>
+  runWithOverlay(
+    () => setLocale(nextLocale.value.code),
+    t("nav.switching_language", { language: nextLocale.value.name }),
+  );
 </script>
 
 <style scoped>

@@ -4,6 +4,10 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+
+    <!-- Outside NuxtLayout so it stays mounted across the navigations it
+         covers. Raise it from anywhere with useOverlay(). -->
+    <Overlay />
   </div>
 </template>
 

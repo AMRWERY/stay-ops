@@ -88,7 +88,14 @@ export default defineNuxtConfig({
       titleTemplate: "%s",
       script: [{}],
       noscript: [],
-      link: [{}],
+      link: [
+        // SVG first — browsers that support it pick it and get the mark at any
+        // size; the bundled .ico stays as the fallback for those that don't.
+        { rel: "icon", type: "image/svg+xml", href: "/svg/logo.svg" },
+        { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "apple-touch-icon", href: "/svg/logo.svg" },
+        { rel: "mask-icon", href: "/svg/logo.svg", color: "#10233D" },
+      ],
       meta: [
         {
           name: "viewport",
