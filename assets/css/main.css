@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-sans text-ink bg-linen;
+  }
+  h1, h2, h3, .font-display {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-card bg-brass px-4 py-2 text-sm font-medium text-white transition hover:bg-brass-dark focus:outline-none focus:ring-2 focus:ring-brass-light disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-card border border-mist-dark bg-white px-4 py-2 text-sm font-medium text-ink transition hover:bg-linen-dark focus:outline-none focus:ring-2 focus:ring-mist-dark;
+  }
+  .card {
+    @apply rounded-card border border-mist bg-white p-5 shadow-card;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium;
+  }
+}

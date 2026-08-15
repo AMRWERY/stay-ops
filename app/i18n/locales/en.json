@@ -1,0 +1,42 @@
+{
+  "home": {},
+  "nav": {
+    "switch_language": "Switch to {language}"
+  },
+  "meta": {
+    "dashboard": "Dashboard",
+    "dashboard_description": "Live overview of rooms, orders, stock levels and staff activity across the property.",
+    "login": "Sign in",
+    "login_description": "Sign in to the StayOps hotel operations workspace.",
+    "guest": "Room service",
+    "guest_description": "Send a room service request straight to the hotel team.",
+    "inventory": "Inventory",
+    "inventory_description": "Track stock on hand, reorder thresholds and expiry dates for every item.",
+    "inventory_new": "New inventory item",
+    "inventory_new_description": "Add an item to the inventory with its unit, supplier and reorder threshold.",
+    "inventory_item": "Inventory item",
+    "inventory_item_description": "Stock levels, movement history and supplier details for a single item.",
+    "notifications": "Notifications",
+    "notifications_description": "Low stock, expiry, order and shift alerts for your property.",
+    "orders": "Room service orders",
+    "orders_description": "Track room service orders from request through to delivery.",
+    "order": "Order details",
+    "order_description": "Items, assignee, timeline and guest feedback for a single order.",
+    "purchase_orders": "Purchase orders",
+    "purchase_orders_description": "Raise and follow up purchase orders with your suppliers.",
+    "reports": "Reports",
+    "reports_description": "Consumption, waste and fulfilment reporting across the property.",
+    "rooms": "Rooms",
+    "rooms_description": "Housekeeping status and service history for every room.",
+    "room": "Room details",
+    "room_description": "Status, QR code and recent activity for a single room.",
+    "settings": "Settings",
+    "settings_description": "Property details, preferences and workspace configuration.",
+    "staff": "Staff",
+    "staff_description": "Team members, roles and shift status across the property.",
+    "staff_member": "Staff member",
+    "staff_member_description": "Role, shift history and assigned work for a team member.",
+    "suppliers": "Suppliers",
+    "suppliers_description": "Supplier contacts and the items they provide."
+  }
+}

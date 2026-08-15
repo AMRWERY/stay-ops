@@ -1,0 +1,15 @@
+{
+    "i18n-ally.localesPaths": [
+        "app/i18n",
+        "app/i18n/locales"
+    ],
+    // The built-in CSS linter does not know Tailwind's at-rules (@tailwind, @apply,
+    // @layer), so it flags them as unknown. PostCSS strips them at build time.
+    "css.lint.unknownAtRules": "ignore",
+    "scss.lint.unknownAtRules": "ignore",
+    "less.lint.unknownAtRules": "ignore",
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "postman.settings.dotenv-detection-notification-visibility": false
+}
