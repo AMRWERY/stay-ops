@@ -1,4 +1,4 @@
-import type { Profile } from "~/types";
+import type { Profile } from "~/types/global";
 
 /**
  * Wraps @nuxtjs/supabase's user/session with the app's `profiles` row,

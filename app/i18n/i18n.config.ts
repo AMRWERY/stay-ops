@@ -1,5 +1,5 @@
 import type { DateTimeFormat, NumberFormat } from "@intlify/core-base";
-import type { Locale } from "~/types/supported-locales";
+import type { Locale } from "~/types/global/supported-locales";
 
 type DatetimeFormats = { [key in Locale]: DateTimeFormat };
 type NumberFormats = { [key in Locale]: NumberFormat };

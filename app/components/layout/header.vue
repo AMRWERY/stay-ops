@@ -10,7 +10,7 @@
         :aria-label="switchLabel"
         @click="toggleLocale"
       >
-        <Icon name="lucide:languages" class="w-6 h-6" />
+        <Icon name="prime:language" class="w-6 h-6" />
         <span class="text-xs font-semibold uppercase">{{
           nextLocale.code
         }}</span>

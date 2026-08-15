@@ -1,4 +1,4 @@
-import type { ValidationContext, ValidatorFn } from "@/types/validators";
+import type { ValidationContext, ValidatorFn } from "@/types/global/validators";
 
 /** Human readable name for a field, preferring its label over its path. */
 const fieldName = (ctx?: ValidationContext) =>

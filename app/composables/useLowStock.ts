@@ -1,4 +1,4 @@
-import type { InventoryItem } from "~/types";
+import type { InventoryItem } from "~/types/global";
 
 /** Items at or below their reorder threshold — drives the low-stock banner and alerts. */
 export const useLowStock = () => {

@@ -5,7 +5,7 @@
  * Private pages → title, description, robots noindex/nofollow
  */
 
-import type { UseSeoPageOptions } from "@/types/seo-pages"
+import type { UseSeoPageOptions } from "@/types/global/seo-pages"
 
 export const useSeoPage = (opts: UseSeoPageOptions) => {
   const { locale } = useI18n()

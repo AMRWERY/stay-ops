@@ -53,16 +53,17 @@ export default defineNuxtConfig({
     // under i18n strategy: "prefix". app/middleware/auth.global.ts handles it
     // instead so the target path keeps its locale prefix.
     redirect: false,
+    // Default is "~/types/database.types.ts"; the file now lives under global/.
+    types: "~/types/global/database.types.ts",
   },
   veeValidate: {
     autoImports: true,
   },
   icon: {
-    // Collections come from the @iconify-json packages in devDependencies, so
-    // the server never calls out to api.iconify.design.
-    serverBundle: {
-      collections: ["heroicons", "lucide"],
-    },
+    // "local" auto-discovers every @iconify-json package in devDependencies, so
+    // adding a new icon set only means installing it — no config change here.
+    // Icons are served from those packages instead of api.iconify.design.
+    serverBundle: "local",
     // Scanning bundles every icon name found in the source, which lets
     // loadIcon() resolve synchronously during SSR instead of fetching
     // /api/_nuxt_icon (a relative URL the server cannot fetch, which is what

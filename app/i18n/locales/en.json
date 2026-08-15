@@ -22,6 +22,8 @@
     "orders_description": "Track room service orders from request through to delivery.",
     "order": "Order details",
     "order_description": "Items, assignee, timeline and guest feedback for a single order.",
+    "room_service": "Room service",
+    "room_service_description": "Live board of room service requests at every stage of fulfilment.",
     "purchase_orders": "Purchase orders",
     "purchase_orders_description": "Raise and follow up purchase orders with your suppliers.",
     "reports": "Reports",

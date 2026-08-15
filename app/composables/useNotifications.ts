@@ -1,4 +1,4 @@
-import type { AppNotification } from "~/types";
+import type { AppNotification } from "~/types/global";
 
 /** Fetches notifications for the current profile and subscribes to new ones in realtime. */
 export const useNotifications = () => {
