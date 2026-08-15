@@ -6,7 +6,7 @@
       <Header />
 
       <!-- Scrollable page area -->
-      <div class="flex-1 overflow-y-auto px-6 lg:px-10 pb-10">
+      <div class="flex-1 overflow-y-auto px-6 lg:px-10 pb-10 py-8">
         <slot />
       </div>
     </main>

@@ -4,15 +4,34 @@ export interface OrderItem {
   qty: number;
 }
 
+export type OrderStatus =
+  | "pending"
+  | "preparing"
+  | "on-the-way"
+  | "delivered";
+
+export interface OrderAssignee {
+  name: string;
+  avatar?: string;
+  /** Shown when there's no avatar. Derived from the name when omitted. */
+  initials?: string;
+}
+
 export interface Order {
   id: string;
   room: string;
-  status: "pending" | "preparing" | "on-the-way";
+  status: OrderStatus;
   items: OrderItem[];
   timeAgo: string;
-  assignee?: {
-    name: string;
-    avatar?: string;
-  };
-  dotColor: string;
+  assignee?: OrderAssignee;
+  isUrgent?: boolean;
+}
+
+export interface Staff {
+  id: number;
+  name: string;
+  role: string;
+  status: string;
+  avatar?: string;
+  initials?: string;
 }
