@@ -1,7 +1,22 @@
 <template>
-  <header class="h-20 flex items-center justify-between px-10 shrink-0">
-    <h2 class="text-2xl font-serif">{{ title }}</h2>
-    <div class="flex items-center gap-6">
+  <header
+    class="h-20 flex items-center justify-between px-6 lg:px-10 shrink-0 gap-4"
+  >
+    <div class="flex items-center gap-3 min-w-0">
+      <!-- Opens the off-canvas sidebar; hidden once the sidebar is pinned -->
+      <button
+        type="button"
+        class="lg:hidden text-slate-500 hover:text-slate-800 transition-colors shrink-0"
+        aria-controls="app-sidebar"
+        :aria-expanded="isSidebarOpen"
+        aria-label="Open navigation"
+        @click="toggleSidebar"
+      >
+        <Icon name="lucide:menu" class="w-6 h-6" />
+      </button>
+      <h2 class="text-2xl font-serif truncate">{{ title }}</h2>
+    </div>
+    <div class="flex items-center gap-4 sm:gap-6 shrink-0">
       <!-- Locale switch -->
       <button
         type="button"
@@ -33,15 +48,13 @@
       <div
         class="w-10 h-10 rounded-full bg-slate-300 overflow-hidden border-2 border-white shadow-sm"
       >
-        <img src="https://i.pravatar.cc/100?u=manager" alt="User" />
+        <img src="/img/fake-user.jpg" alt="User" />
       </div>
     </div>
   </header>
 </template>
 
 <script lang="ts" setup>
-import type { LocaleObject } from "@nuxtjs/i18n";
-
 withDefaults(
   defineProps<{
     /** Greeting shown on the left of the header. */
@@ -53,6 +66,7 @@ withDefaults(
 );
 
 const { t, locale, locales, setLocale } = useI18n();
+const { isOpen: isSidebarOpen, toggle: toggleSidebar } = useSidebar();
 
 /**
  * The locale the button switches to. With two locales this is a plain toggle;

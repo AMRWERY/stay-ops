@@ -1,8 +1,37 @@
 <template>
-  <aside class="w-64 bg-[#09101d] text-slate-400 flex flex-col shrink-0">
-    <div class="p-6 mb-4">
-      <h1 class="text-white text-xl font-serif font-bold">StayOps</h1>
-      <p class="text-xs text-slate-500">Back-of-House</p>
+  <!-- Backdrop, small screens only -->
+  <div
+    v-if="isOpen"
+    class="fixed inset-0 z-40 bg-black/50 lg:hidden"
+    aria-hidden="true"
+    @click="close"
+  />
+
+  <aside
+    id="app-sidebar"
+    :class="[
+      'w-64 bg-[#09101d] text-slate-400 flex flex-col shrink-0',
+      // Below lg the sidebar is an off-canvas drawer; from lg up these
+      // max-lg: utilities drop out and it is a normal flex column again.
+      'max-lg:fixed max-lg:inset-y-0 max-lg:start-0 max-lg:z-50 max-lg:transition-transform max-lg:duration-300',
+      isOpen
+        ? 'max-lg:translate-x-0'
+        : 'max-lg:-translate-x-full max-lg:rtl:translate-x-full',
+    ]"
+  >
+    <div class="p-6 mb-4 flex items-start justify-between">
+      <div>
+        <h1 class="text-white text-xl font-serif font-bold">StayOps</h1>
+        <p class="text-xs text-slate-500">Back-of-House</p>
+      </div>
+      <button
+        type="button"
+        class="lg:hidden text-slate-500 hover:text-white transition-colors"
+        aria-label="Close navigation"
+        @click="close"
+      >
+        <Icon name="lucide:x" class="w-5 h-5" />
+      </button>
     </div>
 
     <nav class="flex-1">
@@ -12,7 +41,7 @@
         :to="item.route"
         :class="[
           'flex items-center gap-3 px-6 py-3 text-sm transition-colors',
-          item.active
+          isActive(item.route)
             ? 'bg-[#151d2c] text-[#c5a35e] border-s-4 border-[#c5a35e]'
             : 'hover:text-white',
         ]"
@@ -43,7 +72,7 @@
 <script lang="ts" setup>
 // Icon names are Iconify identifiers from https://icones.js.org (lucide set).
 const navItems = [
-  { name: "Dashboard", icon: "lucide:layout-dashboard", active: true, route: "/" },
+  { name: "Dashboard", icon: "lucide:layout-dashboard", route: "/" },
   { name: "Room Service", icon: "lucide:utensils-crossed", route: "/room-service" },
   { name: "Inventory", icon: "lucide:package", route: "/inventory" },
   { name: "Rooms", icon: "lucide:door-open", route: "/rooms" },
@@ -56,6 +85,26 @@ const navItems = [
 
 const supabase = useSupabaseClient();
 const localePath = useLocalePath();
+const route = useRoute();
+
+const { isOpen, close } = useSidebar();
+
+// The drawer overlays the page on small screens, so dismiss it once the user
+// has navigated or pressed Escape.
+watch(() => route.fullPath, close);
+onKeyStroke("Escape", close);
+
+/**
+ * Highlights the section the current route belongs to. Compared against the
+ * localised path, since route.path carries the locale prefix ("/en/inventory").
+ * Child routes keep their section active, so /inventory/42 still lights up
+ * Inventory — but "/" has to match exactly or it would match everything.
+ */
+const isActive = (target: string) => {
+  const path = localePath(target);
+  if (target === "/") return route.path === path;
+  return route.path === path || route.path.startsWith(`${path}/`);
+};
 
 const isSigningOut = ref(false);
 

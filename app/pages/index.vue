@@ -1,17 +1,6 @@
 <template>
   <div>
-    <div class="flex min-h-screen bg-[#f8f7f4] font-sans text-slate-900">
-      <!-- Sidebar -->
-      <Sidebar />
-
-      <!-- Main Content -->
-      <main class="flex-1 flex flex-col h-screen overflow-hidden">
-        <!-- Header -->
-        <Header />
-
-        <!-- Scrollable Area -->
-        <div class="flex-1 overflow-y-auto px-10 pb-10">
-          <!-- Inventory Alert -->
+    <!-- Inventory Alert -->
           <div
             class="bg-[#fdf3f0] border border-[#f5d0c5] rounded-lg p-4 mb-8 flex items-start justify-between"
           >
@@ -146,9 +135,6 @@
                 </div>
               </template>
             </div>
-          </div>
-        </div>
-      </main>
     </div>
   </div>
 </template>
