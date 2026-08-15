@@ -52,27 +52,21 @@
       :class="['flex items-center gap-3', actionsClass ?? 'mt-6']"
     >
       <slot name="actions" v-bind="slotProps">
-        <button
+        <VButton
           type="submit"
+          :label="submitLabel"
+          :loading="isBusy"
+          loading-icon="heroicons:arrow-path"
           :disabled="isSubmitDisabled"
-          class="inline-flex items-center justify-center gap-2 bg-[#c5a35e] hover:bg-[#b39150] text-white px-5 py-2.5 rounded-md font-medium transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
-        >
-          <Icon
-            v-if="isBusy"
-            name="heroicons:arrow-path"
-            class="w-4 h-4 animate-spin"
-          />
-          {{ submitLabel }}
-        </button>
+        />
 
-        <button
+        <VButton
           v-if="showReset"
           type="reset"
+          variant="ghost"
+          :label="resetLabel"
           :disabled="isBusy"
-          class="inline-flex items-center justify-center px-5 py-2.5 rounded-md font-medium text-slate-600 hover:bg-slate-100 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
-        >
-          {{ resetLabel }}
-        </button>
+        />
       </slot>
     </div>
   </component>

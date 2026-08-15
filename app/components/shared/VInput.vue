@@ -285,34 +285,32 @@
             class="absolute end-3 flex items-center gap-1.5 text-slate-400 z-10"
           >
             <!-- Clear Button -->
-            <button
+            <VButton
               v-if="clearable && hasValue && !disabled && !readonly"
-              type="button"
-              @click="clearInput"
-              class="p-0.5 hover:text-slate-600 focus:outline-none transition-colors rounded"
+              variant="plain"
+              icon="heroicons:x-mark"
+              icon-class="w-4 h-4"
+              class="p-0.5 rounded hover:text-slate-600"
               title="Clear input"
-            >
-              <Icon name="heroicons:x-mark" class="w-4 h-4" />
-            </button>
+              aria-label="Clear input"
+              @click="clearInput"
+            />
 
             <!-- Password Show/Hide Toggle -->
-            <button
+            <VButton
               v-if="type === 'password' && showPasswordToggle"
-              type="button"
-              @click="isPasswordVisible = !isPasswordVisible"
-              class="p-0.5 hover:text-slate-600 focus:outline-none transition-colors rounded"
+              variant="plain"
+              :icon="
+                isPasswordVisible ? 'heroicons:eye-slash' : 'heroicons:eye'
+              "
+              :icon-class="iconSizeClass"
+              class="p-0.5 rounded hover:text-slate-600"
               :title="isPasswordVisible ? 'Hide password' : 'Show password'"
               :aria-label="
                 isPasswordVisible ? 'Hide password' : 'Show password'
               "
-            >
-              <Icon
-                :name="
-                  isPasswordVisible ? 'heroicons:eye-slash' : 'heroicons:eye'
-                "
-                :class="iconSizeClass"
-              />
-            </button>
+              @click="isPasswordVisible = !isPasswordVisible"
+            />
 
             <!-- Suffix Icon or Slot -->
             <slot name="suffix">

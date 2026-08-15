@@ -17,13 +17,13 @@
                 </p>
               </div>
             </div>
-            <button
-              type="button"
+            <VButton
+              variant="plain"
+              icon="lucide:x"
+              icon-class="w-4 h-4"
               class="text-orange-400 hover:text-orange-600"
               aria-label="Dismiss alert"
-            >
-              <Icon name="lucide:x" class="w-4 h-4" />
-            </button>
+            />
           </div>
 
           <!-- Stats Overview -->
@@ -55,12 +55,13 @@
           <!-- Section Title -->
           <div class="flex items-center justify-between mb-6">
             <h3 class="text-xl font-serif">Room Service Orders</h3>
-            <button
-              type="button"
-              class="flex items-center gap-2 px-4 py-1.5 bg-white border border-slate-200 rounded-lg text-sm shadow-sm hover:bg-slate-50"
-            >
-              <Icon name="lucide:filter" class="w-4 h-4" /> Filter
-            </button>
+            <VButton
+              variant="secondary"
+              size="sm"
+              rounded="lg"
+              icon="lucide:filter"
+              label="Filter"
+            />
           </div>
 
           <!-- Kanban Board -->

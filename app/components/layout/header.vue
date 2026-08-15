@@ -4,47 +4,48 @@
   >
     <div class="flex items-center gap-3 min-w-0">
       <!-- Opens the off-canvas sidebar; hidden once the sidebar is pinned -->
-      <button
-        type="button"
-        class="lg:hidden text-slate-500 hover:text-slate-800 transition-colors shrink-0"
+      <VButton
+        variant="plain"
+        icon="lucide:menu"
+        icon-class="w-6 h-6"
+        class="lg:hidden text-slate-500 hover:text-slate-800 shrink-0"
         aria-controls="app-sidebar"
         :aria-expanded="isSidebarOpen"
         aria-label="Open navigation"
         @click="toggleSidebar"
-      >
-        <Icon name="lucide:menu" class="w-6 h-6" />
-      </button>
+      />
       <h2 class="text-2xl font-serif truncate">{{ title }}</h2>
     </div>
     <div class="flex items-center gap-4 sm:gap-6 shrink-0">
       <!-- Locale switch -->
-      <button
-        type="button"
-        class="flex items-center gap-1.5 text-slate-500 hover:text-slate-800 transition-colors"
+      <VButton
+        variant="plain"
+        icon="prime:language"
+        icon-class="w-6 h-6"
+        class="gap-1.5 text-slate-500 hover:text-slate-800"
         :title="switchLabel"
         :aria-label="switchLabel"
         @click="toggleLocale"
       >
-        <Icon name="prime:language" class="w-6 h-6" />
         <span class="text-xs font-semibold uppercase">{{
           nextLocale.code
         }}</span>
-      </button>
+      </VButton>
 
-      <button
-        type="button"
+      <VButton
+        variant="plain"
+        icon="lucide:bell"
+        icon-class="w-6 h-6"
         class="text-slate-500 hover:text-slate-800"
         aria-label="Notifications"
-      >
-        <Icon name="lucide:bell" class="w-6 h-6" />
-      </button>
-      <button
-        type="button"
+      />
+      <VButton
+        variant="plain"
+        icon="lucide:circle-question-mark"
+        icon-class="w-6 h-6"
         class="text-slate-500 hover:text-slate-800"
         aria-label="Help"
-      >
-        <Icon name="lucide:circle-question-mark" class="w-6 h-6" />
-      </button>
+      />
       <div
         class="w-10 h-10 rounded-full bg-slate-300 overflow-hidden border-2 border-white shadow-sm"
       >

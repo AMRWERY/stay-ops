@@ -49,13 +49,14 @@
 
       <!-- Sign In Button -->
       <template #actions="{ isBusy }">
-        <button
+        <VButton
           type="submit"
-          :disabled="isBusy"
-          class="w-full bg-[#c5a35e] hover:bg-[#b39150] text-white py-3 rounded-md font-medium transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
-        >
-          {{ isBusy ? "Signing in…" : "Sign in" }}
-        </button>
+          size="lg"
+          block
+          label="Sign in"
+          loading-text="Signing in…"
+          :loading="isBusy"
+        />
       </template>
     </LazyVFormWrapper>
   </div>
