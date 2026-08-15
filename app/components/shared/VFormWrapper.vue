@@ -52,7 +52,7 @@
       :class="['flex items-center gap-3', actionsClass ?? 'mt-6']"
     >
       <slot name="actions" v-bind="slotProps">
-        <VButton
+        <LazyVButton
           type="submit"
           :label="submitLabel"
           :loading="isBusy"
@@ -60,7 +60,7 @@
           :disabled="isSubmitDisabled"
         />
 
-        <VButton
+        <LazyVButton
           v-if="showReset"
           type="reset"
           variant="ghost"

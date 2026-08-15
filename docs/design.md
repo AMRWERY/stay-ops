@@ -13,7 +13,7 @@ often on a phone at a cart or a tablet at a stockroom desk. It is not a
 marketing site and not a guest-facing brand experience (except the single
 guest QR-scan screen, which stays in the same system but is simpler).
 
-**Design goal:** feel like a well-run hotel back-of-house — precise, calm,
+**Design goal:** feel like a well-run hotel — precise, calm,
 a little warm, never flashy. Think night-porter's desk, not a startup landing
 page. Every screen should let someone act in seconds, not admire it.
 

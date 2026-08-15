@@ -20,11 +20,12 @@
     ]"
   >
     <div class="p-6 mb-4 flex items-start justify-between">
-      <div>
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-[#c5a35e] rounded-sm"></div>
         <h1 class="text-white text-xl font-serif font-bold">StayOps</h1>
-        <p class="text-xs text-slate-500">Back-of-House</p>
       </div>
-      <VButton
+      
+      <LazyVButton
         variant="plain"
         icon="lucide:x"
         icon-class="w-5 h-5"
@@ -53,7 +54,7 @@
 
     <!-- Sign out -->
     <div class="p-4 border-t border-white/5">
-      <VButton
+      <LazyVButton
         variant="plain"
         block
         icon="material-symbols:logout"
@@ -72,12 +73,20 @@
 // Icon names are Iconify identifiers from https://icones.js.org (lucide set).
 const navItems = [
   { name: "Dashboard", icon: "lucide:layout-dashboard", route: "/" },
-  { name: "Room Service", icon: "lucide:utensils-crossed", route: "/room-service" },
+  {
+    name: "Room Service",
+    icon: "lucide:utensils-crossed",
+    route: "/room-service",
+  },
   { name: "Inventory", icon: "lucide:package", route: "/inventory" },
   { name: "Rooms", icon: "lucide:door-open", route: "/rooms" },
   { name: "Staff", icon: "lucide:users", route: "/staff" },
   { name: "Suppliers", icon: "lucide:truck", route: "/suppliers" },
-  { name: "Purchase Orders", icon: "lucide:file-text", route: "/purchase-orders" },
+  {
+    name: "Purchase Orders",
+    icon: "lucide:file-text",
+    route: "/purchase-orders",
+  },
   { name: "Reports", icon: "lucide:trending-down", route: "/reports" },
   { name: "Settings", icon: "lucide:settings", route: "/settings" },
 ];

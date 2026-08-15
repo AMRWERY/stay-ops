@@ -17,7 +17,7 @@
                 </p>
               </div>
             </div>
-            <VButton
+            <LazyVButton
               variant="plain"
               icon="lucide:x"
               icon-class="w-4 h-4"
@@ -55,7 +55,7 @@
           <!-- Section Title -->
           <div class="flex items-center justify-between mb-6">
             <h3 class="text-xl font-serif">Room Service Orders</h3>
-            <VButton
+            <LazyVButton
               variant="secondary"
               size="sm"
               rounded="lg"

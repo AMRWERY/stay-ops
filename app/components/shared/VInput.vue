@@ -285,7 +285,7 @@
             class="absolute end-3 flex items-center gap-1.5 text-slate-400 z-10"
           >
             <!-- Clear Button -->
-            <VButton
+            <LazyVButton
               v-if="clearable && hasValue && !disabled && !readonly"
               variant="plain"
               icon="heroicons:x-mark"
@@ -297,7 +297,7 @@
             />
 
             <!-- Password Show/Hide Toggle -->
-            <VButton
+            <LazyVButton
               v-if="type === 'password' && showPasswordToggle"
               variant="plain"
               :icon="

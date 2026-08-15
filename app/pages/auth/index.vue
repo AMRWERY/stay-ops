@@ -49,7 +49,7 @@
 
       <!-- Sign In Button -->
       <template #actions="{ isBusy }">
-        <VButton
+        <LazyVButton
           type="submit"
           size="lg"
           block

@@ -56,6 +56,8 @@ export default {
       },
       boxShadow: {
         card: "0 1px 2px rgba(16, 35, 61, 0.06), 0 1px 1px rgba(16, 35, 61, 0.04)",
+        // Bottom-only, so the header reads as a layer above the scrolling page.
+        header: "0 1px 3px rgba(16, 35, 61, 0.07), 0 4px 12px rgba(16, 35, 61, 0.04)",
       },
     },
   },

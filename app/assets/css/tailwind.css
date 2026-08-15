@@ -11,6 +11,36 @@
   h3 {
     @apply font-display;
   }
+
+  /* Scrollbars — Firefox and Chrome 121+. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.mist.dark") transparent;
+  }
+
+  /* Scrollbars — WebKit / older Chromium, which ignore the properties above. */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* The transparent border plus content-box clipping insets the thumb, so it
+     reads as a slim pill rather than filling the whole gutter. */
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full border-[3px] border-solid border-transparent bg-mist-dark bg-clip-content transition-colors;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-light bg-clip-content;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 }
 
 @layer components {

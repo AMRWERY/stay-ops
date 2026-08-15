@@ -3,6 +3,15 @@
   "nav": {
     "switch_language": "Switch to {language}"
   },
+  "greeting": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening",
+    "night": "Good night",
+    "line": "{greeting}, {name}",
+    "am": "AM",
+    "pm": "PM"
+  },
   "meta": {
     "dashboard": "Dashboard",
     "dashboard_description": "Live overview of rooms, orders, stock levels and staff activity across the property.",

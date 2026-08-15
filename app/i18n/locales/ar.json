@@ -3,6 +3,15 @@
   "nav": {
     "switch_language": "التبديل إلى {language}"
   },
+  "greeting": {
+    "morning": "صباح الخير",
+    "afternoon": "طاب يومك",
+    "evening": "مساء الخير",
+    "night": "طابت ليلتك",
+    "line": "{greeting}، {name}",
+    "am": "ص",
+    "pm": "م"
+  },
   "meta": {
     "dashboard": "لوحة التحكم",
     "dashboard_description": "نظرة مباشرة على الغرف والطلبات ومستويات المخزون ونشاط الفريق في المنشأة.",
